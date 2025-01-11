@@ -45,6 +45,11 @@ from realsim.scheduler.schedulers.fifo import FIFOScheduler
 from realsim.scheduler.schedulers.easy import EASYScheduler
 from realsim.scheduler.schedulers.conservative import ConservativeScheduler
 from realsim.scheduler.coschedulers.ranks.random import RandomRanksCoscheduler
+from realsim.scheduler.coschedulers.ranks.popular import PopularFirstRanksCoscheduler
+from realsim.scheduler.coschedulers.ranks.antipopular import AntiPopularFirstRanksCoscheduler
+from realsim.scheduler.coschedulers.ranks.widejobs import WiderJobFirstCoscheduler
+from realsim.scheduler.coschedulers.ranks.largestfisrt import LargestJobFirstCoscheduler
+from realsim.scheduler.coschedulers.ranks.filler import FillerCoscheduler
 
 # Logger
 from realsim.logger.logger import Logger
@@ -88,7 +93,12 @@ class BatchCreator:
             FIFOScheduler.name: FIFOScheduler,
             EASYScheduler.name: EASYScheduler,
             ConservativeScheduler.name: ConservativeScheduler,
-            RandomRanksCoscheduler.name: RandomRanksCoscheduler
+            RandomRanksCoscheduler.name: RandomRanksCoscheduler,
+            PopularFirstRanksCoscheduler.name: PopularFirstRanksCoscheduler,
+            AntiPopularFirstRanksCoscheduler.name: AntiPopularFirstRanksCoscheduler,
+            WiderJobFirstCoscheduler.name: WiderJobFirstCoscheduler,
+            LargestJobFirstCoscheduler.name: LargestJobFirstCoscheduler,
+            FillerCoscheduler.name: FillerCoscheduler
         }
         
         # Load the configuration file
