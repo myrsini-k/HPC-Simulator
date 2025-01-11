@@ -1,0 +1,31 @@
+name: Heatmap
+workloads:
+-   marconi: null
+    db: mongodb+srv://cslab:bQt5TU6zQsu_LZ@storehouse.om2d9c0.mongodb.net
+    loads-machine: "remake-g5k.nancy.grvingt"
+    loads-suite: "NAS"
+    generator:
+      type: "Random Generator"
+      arg: 1000
+    cluster:
+      nodes: 8
+      socket-conf: [16, 16]
+    repeat: 2
+schedulers:
+    default: FIFO Scheduler
+    others:
+    - EASY Scheduler
+    - Conservative Scheduler
+    - Random Ranks Co-Scheduler
+    - Popularity Co-Scheduler
+    - Wider Job First Co-Scheduler
+    - Largest Job First Co-Scheduler
+    - Filler Co-Scheduler
+    general-options:
+        backfill_enabled: true
+        compact_fallback: false
+actions:
+    get_workload:
+        workloads: all
+        schedulers: all
+        workload_dir: "/media/myrsini/Windows-SSD1/Users/myrke/Desktop/Σχολή/ΔΙΠΛΩΜΑΤΙΚΗ/results"
