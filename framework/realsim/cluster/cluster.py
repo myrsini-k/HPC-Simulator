@@ -47,6 +47,8 @@ class Cluster:
         self.queue_size = inf
         # The queue of waiting jobs
         self.waiting_queue: list[Job] = list()
+        # The second queue of waiting jobs
+        self.second_queue: list[Job] = list()
         # The list of executing jobs
         self.execution_list: list[Job] = list()
 

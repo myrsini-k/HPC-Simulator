@@ -50,6 +50,9 @@ from realsim.scheduler.coschedulers.ranks.antipopular import AntiPopularFirstRan
 from realsim.scheduler.coschedulers.ranks.widejobs import WiderJobFirstCoscheduler
 from realsim.scheduler.coschedulers.ranks.largestfisrt import LargestJobFirstCoscheduler
 from realsim.scheduler.coschedulers.ranks.filler import FillerCoscheduler
+from realsim.scheduler.coschedulers.ranks.shortest import ShortestJobFirstCoscheduler
+from realsim.scheduler.coschedulers.ranks.longest import LongestJobFirstCoscheduler
+from realsim.scheduler.coschedulers.ranks.twosteps import TwoStepsCoscheduler
 
 # Logger
 from realsim.logger.logger import Logger
@@ -98,7 +101,10 @@ class BatchCreator:
             AntiPopularFirstRanksCoscheduler.name: AntiPopularFirstRanksCoscheduler,
             WiderJobFirstCoscheduler.name: WiderJobFirstCoscheduler,
             LargestJobFirstCoscheduler.name: LargestJobFirstCoscheduler,
-            FillerCoscheduler.name: FillerCoscheduler
+            FillerCoscheduler.name: FillerCoscheduler,
+            ShortestJobFirstCoscheduler.name: ShortestJobFirstCoscheduler,
+            LongestJobFirstCoscheduler.name: LongestJobFirstCoscheduler,
+            TwoStepsCoscheduler.name: TwoStepsCoscheduler,
         }
         
         # Load the configuration file
